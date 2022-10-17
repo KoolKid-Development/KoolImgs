@@ -24,12 +24,11 @@ def screenshoturl(page):
         print(e)
         pass
     return render_template('sstemplate.html',
-                           ss_location=f'./static/screenshots/images/{page}.png',
-                           json_location=f'.//static/screenshots/json/{page}.json',
+                           ss_location=f'{domain}/static/screenshots/images/{page}.png',
+                           json_location=f'{domain}/static/screenshots/json/{page}.json',
                            upload_username=uploader,
                            uploaderhostname=uploader_name,
                            cur_url=page)
-
 @app.route('/upload', methods=['POST']) 
 def upload():
     if not request.method == 'POST':
@@ -60,7 +59,7 @@ def upload():
                           "author_url": domain,
                           "provider_name": hurry.filesize.size(size, system=hurry.filesize.alternative)}
 
-            with open(f'static/screenshots/json/{filename}.json', 'w+') as f:
+            with open(f'./static/screenshots/json/{filename}.json', 'w+') as f:
                 json.dump(image_json, f, indent=4)
             return json.dumps({"filename": filename, "extension": extension}), 200
     else:
@@ -70,11 +69,11 @@ def upload():
 def delete():
     del_url = request.args.get('del_url')
     used_api_key = request.args.get('api_key')
-    if f"{del_url}.png" in os.listdir('static/screenshots/images'):
+    if f"{del_url}.png" in os.listdir('./static/screenshots/images'):
 
         if used_api_key == api_key:
-            os.remove(f'static/screenshots/images/{del_url}.png')
-            os.remove(f'static/screenshots/json/{del_url}.json')
+            os.remove(f'./static/screenshots/images/{del_url}.png')
+            os.remove(f'./static/screenshots/json/{del_url}.json')
             return render_template('succes.html', URL=domain), 200
         else:
             return render_template('faild.html', URL=domain), 401
