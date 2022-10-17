@@ -1,0 +1,30 @@
+<head>
+    <title>{{uploaderhostname}} | {{upload_username}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="theme-color" content="#7289DA">
+    <meta content='{{ss_location}}' property='og:image'>
+    <meta name="twitter:card" content="summary_large_image">
+    <link type="application/json+oembed" href="{{json_location}}">
+    <link rel='stylesheet' href="../static/css/screenshots/style.css">
+    <link rel="icon" href="../static/img/logo.png">
+</head>
+<body class="body">
+    <center>
+        <div class="center-vert">
+            
+            <p class="us3er-credit2" >Welcome to {{uploaderhostname}}</p>
+            <p class="user-credit" >This image was uploaded by: {{upload_username}} </p>
+            <p class="us4er-credit3" ></p>
+            &nbsp;
+            
+            <img class="img" src="{{ss_location}}">
+      
+        </div>
+        <form action="delete" class="api-form">
+            <input type="hidden" id="img_url" name="del_url" value="{{cur_url}}">
+            <input type="text" id="api_key" name="api_key" value="Enter your api key here to delete" onfocus="this.value=''">
+        </form>
+    </center>
+</body>
+

@@ -1,0 +1,13 @@
+{
+  "Version": "13.4.0",
+  "Name": "KoolIMGS",
+  "DestinationType": "ImageUploader",
+  "RequestMethod": "POST",
+  "RequestURL": "http://127.0.0.1:1234/upload",
+  "Body": "MultipartFormData",
+  "Arguments": {
+    "secret_key": "API_KEY"
+  },
+  "FileFormName": "image",
+  "URL": "http://127.0.0.1:1234/$json:filename$"
+}
