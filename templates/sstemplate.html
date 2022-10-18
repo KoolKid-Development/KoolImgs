@@ -3,20 +3,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta name="theme-color" content="#7289DA">
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js></script>
+    <script src="../static/js/Index/bootstrap.min.js"></script>
+    <link rel=stylesheet href="../static/css/mainpage/bootstrap.min.css">
+    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel=stylesheet>   
     <meta content='{{ss_location}}' property='og:image'>
     <meta name="twitter:card" content="summary_large_image">
     <link type="application/json+oembed" href="{{json_location}}">
     <link rel='stylesheet' href="../static/css/screenshots/style.css">
-    <link rel="icon" href="../static/img/logo.png">
+    <link rel="icon" href="{{websitelogo}}">
 </head>
 <body class="body">
+    <nav class="navbar navbar-expand-lg  text-uppercase">
+        <a class="navbar-brand" href="/">{{uploaderhostname}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{websiteurl}}">Website </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{dsc}}">Discord</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{git}}">GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <center>
         <div class="center-vert">
-            
-            <p class="us3er-credit2" >Welcome to {{uploaderhostname}}</p>
-            <p class="user-credit" >This image was uploaded by: {{upload_username}} </p>
-            <p class="us4er-credit3" ></p>
-            &nbsp;
+            <p class="user-credit" >This image was uploaded by: {{upload_username}}</p>
             
             <img class="img" src="{{ss_location}}">
       
@@ -27,4 +51,11 @@
         </form>
     </center>
 </body>
+<div class="box"></div>
+      
+<footer id="sticky-footer">
+  <div class="container text-center">
+    <center><small>Copyright &copy;<a href="">KoolKidDevelopment</a> 2022. All rights reserved.</small></center>
+  </div>
+</footer>
 
