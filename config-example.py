@@ -2,7 +2,7 @@
 # In this file you can edit your ImageUploader
 # DONT CHANGE THIS TWO SETTINGS
 storage_folder = 'static/screenshots/images'
-version = "1.4"
+version = "1.0"
 #Lets start up with our domain fill in your domain
 #You can use an ip or an domain
 domain = 'https://i.kool-kid.xyz'
