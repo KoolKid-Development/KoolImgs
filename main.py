@@ -1,11 +1,7 @@
-from optparse import OptionParser
-from ssl import VerifyMode
 from flask import Flask, render_template, request
 import hurry.filesize, secrets, json, os
 from os.path import splitext
 from PIL import Image
-from multidict import getversion
-from tomlkit import key
 import config
 from config import version, api_key, description, domain, port, uploader_name, keywords, logo, website ,author_name, storage_folder, github, discord
 from getversion import versiondata
@@ -38,8 +34,8 @@ if version == versiondata:
          print(e)
          pass
      return render_template('sstemplate.html',
-                            ss_location=f'./static/screenshots/images/{page}.png',
-                            json_location=f'./static/screenshots/json/{page}.json',
+                            ss_location=f'{domain}/static/screenshots/images/{page}.png',
+                            json_location=f'{domain}/static/screenshots/json/{page}.json',
                             upload_username=uploader,
                             uploaderhostname=uploader_name,
                             cur_url=page, git=github, websiteurl=website, dsc=discord, keyemwords=keywords, websitelogo=logo)
