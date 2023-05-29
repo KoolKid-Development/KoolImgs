@@ -1,8 +1,5 @@
-# KoolImgs
-Flask website to upload sharex images and display them in discord with an embed
+# KoolImgs (EOL)
 
-# Docs
-https://docs.kool-kid.xyz
+KoolImgs was sold to AtoroTech x MythicalSystems
 
-# Discord
-https://discord.kool-kid.xyz
+> https://github.com/AtoroTech/AtoroPics
